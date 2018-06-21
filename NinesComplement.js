@@ -1,10 +1,13 @@
 var sum = 0;
 
-function ninesComplements(num) {
+function nsComplements(num, n) {
   num = num.toString().split('')
-  for (i = 0; i < num.length; i++) {
-    sum = sum + (9 - num[i])
-  }
+  num.forEach( (each) => {
+    sum += ( n - each)
+  })
   return sum;
 }
-ninesComplements(104);
+nsComplements(104, 9);
+// 22
+
+// n = any Number
